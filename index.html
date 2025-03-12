@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Image Explorer</h1>
+      <form class="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for images (e.g., nature, cats)"
+          aria-label="Search input"
+        />
+      </form>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
+
+    <main class="container">
+      <div id="loading" class="loading hidden">
+        <i class="fas fa-spinner fa-spin"></i> Loading...
+      </div>
+      <div id="error" class="error hidden"></div>
+      <div class="results-info">
+        <span id="results-count">0</span> images loaded
+        <button id="clear-results">Clear Results</button>
+      </div>
+      <div class="search-results"></div>
+      <button id="show-more-button">Show More</button>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
